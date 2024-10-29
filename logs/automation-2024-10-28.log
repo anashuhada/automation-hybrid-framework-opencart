@@ -1,0 +1,55 @@
+22:07:43.278 [main] INFO  testCases.TC_RF_004_LoginTest - *** Clicking on MyRegister link ***
+22:07:43.409 [main] INFO  testCases.TC_RF_004_LoginTest - *** Clicking on Login link ***
+22:07:43.410 [main] INFO  testCases.TC_RF_004_LoginTest - *** Entering login details ***
+22:07:43.506 [main] INFO  testCases.TC_RF_004_LoginTest - *** Entering registered email ***
+22:07:43.533 [main] INFO  testCases.TC_RF_004_LoginTest - *** Entering registered password ***
+22:07:44.024 [main] INFO  testCases.TC_RF_004_LoginTest - *** Clicking on Login button ***
+22:07:44.027 [main] INFO  testCases.TC_RF_004_LoginTest - *** Verifying expected message ***
+22:07:44.049 [main] INFO  testCases.TC_RF_004_LoginTest - *** Login success ***
+22:07:44.049 [main] INFO  testCases.TC_RF_004_LoginTest - *** Finished TC_RF_004_LoginTest ***
+22:36:41.998 [main] DEBUG org.testng.TestNG - suiteXmlPath: "/Users/anashuhada/IdeaProjects/OpenCart/testng-cross-browser-testing.xml"
+22:36:42.083 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/anashuhada/IdeaProjects/OpenCart/testng-cross-browser-testing.xml
+
+22:37:04.799 [TestNG-tests-2] INFO  testCases.TC_RF_001_AccountRegistrationTest - *** Starting TC_RF_001_AccountRegistrationTest ***
+22:37:05.318 [TestNG-tests-2] INFO  testCases.TC_RF_001_AccountRegistrationTest - *** Clicking on MyAccount link ***
+22:37:05.652 [TestNG-tests-2] INFO  testCases.TC_RF_001_AccountRegistrationTest - *** Clicking on Register link ***
+22:37:05.656 [TestNG-tests-2] INFO  testCases.TC_RF_001_AccountRegistrationTest - *** Providing registration details ***
+22:37:06.799 [TestNG-tests-2] INFO  testCases.TC_RF_001_AccountRegistrationTest - *** Verifying expected message 1 ***
+22:37:06.813 [TestNG-tests-2] INFO  testCases.TC_RF_001_AccountRegistrationTest - *** Verifying expected message 2 ***
+22:37:06.813 [TestNG-tests-2] INFO  testCases.TC_RF_001_AccountRegistrationTest - *** Finished TC_RF_001_AccountRegistrationTest ***
+22:37:20.071 [TestNG-tests-1] INFO  testCases.TC_RF_001_AccountRegistrationTest - *** Starting TC_RF_001_AccountRegistrationTest ***
+22:37:20.090 [TestNG-tests-1] INFO  testCases.TC_RF_001_AccountRegistrationTest - *** Clicking on MyAccount link ***
+22:37:20.358 [TestNG-tests-1] INFO  testCases.TC_RF_001_AccountRegistrationTest - *** Clicking on Register link ***
+22:37:20.358 [TestNG-tests-1] INFO  testCases.TC_RF_001_AccountRegistrationTest - *** Providing registration details ***
+22:37:21.205 [TestNG-tests-1] INFO  testCases.TC_RF_001_AccountRegistrationTest - *** Verifying expected message 1 ***
+22:37:21.217 [TestNG-tests-1] INFO  testCases.TC_RF_001_AccountRegistrationTest - *** Verifying expected message 2 ***
+22:37:21.217 [TestNG-tests-1] INFO  testCases.TC_RF_001_AccountRegistrationTest - *** Finished TC_RF_001_AccountRegistrationTest ***
+22:39:04.043 [main] DEBUG org.testng.TestNG - suiteXmlPath: "/Users/anashuhada/IdeaProjects/OpenCart/testng-master.xml"
+22:39:04.126 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/anashuhada/IdeaProjects/OpenCart/testng-master.xml
+
+22:39:06.394 [main] INFO  testCases.TC_RF_004_LoginTest - *** Starting TC_RF_004_LoginTest ***
+22:39:06.419 [main] INFO  testCases.TC_RF_004_LoginTest - *** Clicking on MyRegister link ***
+22:39:06.635 [main] INFO  testCases.TC_RF_004_LoginTest - *** Clicking on Login link ***
+22:39:06.637 [main] INFO  testCases.TC_RF_004_LoginTest - *** Entering login details ***
+22:39:06.737 [main] INFO  testCases.TC_RF_004_LoginTest - *** Entering registered email ***
+22:39:06.773 [main] INFO  testCases.TC_RF_004_LoginTest - *** Entering registered password ***
+22:39:07.150 [main] INFO  testCases.TC_RF_004_LoginTest - *** Clicking on Login button ***
+22:39:07.151 [main] INFO  testCases.TC_RF_004_LoginTest - *** Verifying expected message ***
+22:41:19.775 [main] DEBUG org.testng.TestNG - suiteXmlPath: "/Users/anashuhada/IdeaProjects/OpenCart/testng-master.xml"
+22:41:19.852 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/anashuhada/IdeaProjects/OpenCart/testng-master.xml
+
+22:41:22.891 [main] INFO  testCases.TC_RF_004_LoginTest - *** Starting TC_RF_004_LoginTest ***
+22:41:22.930 [main] INFO  testCases.TC_RF_004_LoginTest - *** Clicking on MyRegister link ***
+22:41:23.051 [main] INFO  testCases.TC_RF_004_LoginTest - *** Clicking on Login link ***
+22:41:23.052 [main] INFO  testCases.TC_RF_004_LoginTest - *** Entering login details ***
+22:41:23.158 [main] INFO  testCases.TC_RF_004_LoginTest - *** Entering registered email ***
+22:41:23.187 [main] INFO  testCases.TC_RF_004_LoginTest - *** Entering registered password ***
+22:41:23.581 [main] INFO  testCases.TC_RF_004_LoginTest - *** Clicking on Login button ***
+22:41:23.582 [main] INFO  testCases.TC_RF_004_LoginTest - *** Verifying expected message ***
+22:51:57.300 [main] DEBUG org.testng.TestNG - suiteXmlPath: "/Users/anashuhada/IdeaProjects/OpenCart/testng-master.xml"
+22:51:57.382 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/anashuhada/IdeaProjects/OpenCart/testng-master.xml
+

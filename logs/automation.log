@@ -1,0 +1,32 @@
+22:52:01.525 [main] INFO  testCases.TC_RF_004_LoginTest - *** Starting TC_RF_004_LoginTest ***
+22:52:01.560 [main] INFO  testCases.TC_RF_004_LoginTest - *** Clicking on MyRegister link ***
+22:52:01.682 [main] INFO  testCases.TC_RF_004_LoginTest - *** Clicking on Login link ***
+22:52:01.683 [main] INFO  testCases.TC_RF_004_LoginTest - *** Entering login details ***
+22:52:01.788 [main] INFO  testCases.TC_RF_004_LoginTest - *** Entering registered email ***
+22:52:01.819 [main] INFO  testCases.TC_RF_004_LoginTest - *** Entering registered password ***
+22:52:02.390 [main] INFO  testCases.TC_RF_004_LoginTest - *** Clicking on Login button ***
+22:52:02.391 [main] INFO  testCases.TC_RF_004_LoginTest - *** Verifying expected message ***
+22:55:35.064 [main] DEBUG org.testng.TestNG - suiteXmlPath: "/Users/anashuhada/IdeaProjects/OpenCart/testng-master.xml"
+22:55:35.141 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/anashuhada/IdeaProjects/OpenCart/testng-master.xml
+
+22:55:37.732 [main] INFO  testCases.TC_RF_004_LoginTest - *** Starting TC_RF_004_LoginTest ***
+22:55:37.767 [main] INFO  testCases.TC_RF_004_LoginTest - *** Clicking on MyRegister link ***
+22:55:37.900 [main] INFO  testCases.TC_RF_004_LoginTest - *** Clicking on Login link ***
+22:55:37.901 [main] INFO  testCases.TC_RF_004_LoginTest - *** Entering login details ***
+22:55:38.006 [main] INFO  testCases.TC_RF_004_LoginTest - *** Entering registered email ***
+22:55:38.039 [main] INFO  testCases.TC_RF_004_LoginTest - *** Entering registered password ***
+22:55:38.368 [main] INFO  testCases.TC_RF_004_LoginTest - *** Clicking on Login button ***
+22:55:38.369 [main] INFO  testCases.TC_RF_004_LoginTest - *** Verifying expected message ***
+22:58:48.532 [main] DEBUG org.testng.TestNG - suiteXmlPath: "/Users/anashuhada/IdeaProjects/OpenCart/testng-master.xml"
+22:58:48.615 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/anashuhada/IdeaProjects/OpenCart/testng-master.xml
+
+22:58:51.389 [main] INFO  testCases.TC_RF_004_LoginTest - *** Starting TC_RF_004_LoginTest ***
+22:58:51.429 [main] INFO  testCases.TC_RF_004_LoginTest - *** Clicking on MyRegister link ***
+22:58:51.604 [main] INFO  testCases.TC_RF_004_LoginTest - *** Clicking on Login link ***
+22:58:51.606 [main] INFO  testCases.TC_RF_004_LoginTest - *** Entering login details ***
+22:58:51.707 [main] INFO  testCases.TC_RF_004_LoginTest - *** Entering registered email ***
+22:58:51.738 [main] INFO  testCases.TC_RF_004_LoginTest - *** Entering registered password ***
+22:58:52.065 [main] INFO  testCases.TC_RF_004_LoginTest - *** Clicking on Login button ***
+22:58:52.066 [main] INFO  testCases.TC_RF_004_LoginTest - *** Verifying expected message ***
