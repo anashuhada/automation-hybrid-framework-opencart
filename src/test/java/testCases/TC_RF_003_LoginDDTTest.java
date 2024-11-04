@@ -8,11 +8,11 @@ import pageObjects.MyAccountPage;
 import testBase.BaseClass;
 import utilities.DataProviders;
 
-public class TC_RF_005_LoginDDTTest extends BaseClass {
+public class TC_RF_003_LoginDDTTest extends BaseClass {
 
     @Test(dataProvider = "LoginData", dataProviderClass = DataProviders.class, groups="DataDriven") // getting data provider from different class
     public void verifyLogin(String email, String password, String expectedMsg) {
-        logger.info("*** Starting TC_RF_005_LoginDDTTest ***");
+        logger.info("*** Starting TC_RF_003_LoginDDTTest ***");
         try {
             HomePage hp = new HomePage(driver);
             hp.clickLinkMyAccount();
@@ -75,6 +75,6 @@ public class TC_RF_005_LoginDDTTest extends BaseClass {
             Assert.fail("Test failed due to an exception: " + e.getMessage()); // intentionally fail the test
             e.printStackTrace();
         }
-        logger.info("*** Finished TC_RF_005_LoginDDTTest ***");
+        logger.info("*** Finished TC_RF_003_LoginDDTTest ***");
     }
 }

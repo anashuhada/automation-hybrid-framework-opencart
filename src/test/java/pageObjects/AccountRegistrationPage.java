@@ -73,8 +73,9 @@ public class AccountRegistrationPage extends BasePage {
     public void setCheckSubscribe() {
        for(WebElement subs : listSubscribe) {
            try {
-               if (subs.getText().equals("Yes")) {
+               if(subs.getText().equals("Yes")) {
                    js.executeScript("arguments[0].click()", subs);
+                   break;
                }
            } catch(Exception e) {
                System.out.println(e.getMessage());

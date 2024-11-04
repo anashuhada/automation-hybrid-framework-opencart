@@ -7,11 +7,11 @@ import pageObjects.LoginPage;
 import pageObjects.MyAccountPage;
 import testBase.BaseClass;
 
-public class TC_RF_004_LoginTest extends BaseClass {
+public class TC_RF_002_LoginTest extends BaseClass {
 
     @Test(groups = {"Sanity", "Master"})
     public void verifyLogin() {
-        logger.info("*** Starting TC_RF_004_LoginTest ***");
+        logger.info("*** Starting TC_RF_002_LoginTest ***");
         try {
             HomePage hp = new HomePage(driver);
             hp.clickLinkMyAccount();
@@ -56,6 +56,6 @@ public class TC_RF_004_LoginTest extends BaseClass {
             Assert.fail("Test failed due to an exception: " + e.getMessage()); // intentionally fail the test
             e.printStackTrace();
         }
-        logger.info("*** Finished TC_RF_004_LoginTest ***");
+        logger.info("*** Finished TC_RF_002_LoginTest ***");
     }
 }

@@ -1,0 +1,55 @@
+22:31:46.023 [main] DEBUG org.testng.TestNG - suiteXmlPath: "/Users/anashuhada/Library/Caches/JetBrains/IdeaIC2024.2/temp-testng-customsuite.xml"
+22:31:46.110 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/anashuhada/Library/Caches/JetBrains/IdeaIC2024.2/temp-testng-customsuite.xml
+
+22:31:50.409 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Clicking on MyRegister link ***
+22:31:50.569 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Clicking on Login link ***
+22:31:50.570 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Entering login details ***
+22:31:50.658 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Entering registered email ***
+22:31:50.686 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Entering registered password ***
+22:31:51.208 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Clicking on Login button ***
+22:31:53.653 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Searching for MacBook ***
+22:32:04.764 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Clicking thumbnail images ***
+22:32:09.437 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Clicking the menu tabs ***
+22:32:09.461 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Adding the product to Wish List ***
+22:33:09.139 [main] DEBUG org.testng.TestNG - suiteXmlPath: "/Users/anashuhada/Library/Caches/JetBrains/IdeaIC2024.2/temp-testng-customsuite.xml"
+22:33:09.224 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/anashuhada/Library/Caches/JetBrains/IdeaIC2024.2/temp-testng-customsuite.xml
+
+22:33:11.414 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Clicking on MyRegister link ***
+22:33:11.574 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Clicking on Login link ***
+22:33:11.575 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Entering login details ***
+22:33:11.682 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Entering registered email ***
+22:33:11.710 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Entering registered password ***
+22:33:12.407 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Clicking on Login button ***
+22:33:14.858 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Searching for MacBook ***
+22:33:26.038 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Clicking thumbnail images ***
+22:33:30.614 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Clicking the menu tabs ***
+22:33:30.637 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Adding the product to Wish List ***
+22:33:30.649 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Verifying the title ***
+22:33:30.659 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Verifying the price ***
+22:33:30.699 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Updating the total quantity of the order ***
+22:33:30.725 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Clicking the Add to Cart button ***
+22:33:32.348 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Verifying the success message ***
+22:33:32.348 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Finished TC_RF_004_SearchProductTest ***
+22:34:19.524 [main] DEBUG org.testng.TestNG - suiteXmlPath: "/Users/anashuhada/Library/Caches/JetBrains/IdeaIC2024.2/temp-testng-customsuite.xml"
+22:34:19.606 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/anashuhada/Library/Caches/JetBrains/IdeaIC2024.2/temp-testng-customsuite.xml
+
+22:34:24.346 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Clicking on MyRegister link ***
+22:34:24.503 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Clicking on Login link ***
+22:34:24.504 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Entering login details ***
+22:34:24.601 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Entering registered email ***
+22:34:24.628 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Entering registered password ***
+22:34:25.266 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Clicking on Login button ***
+22:34:27.711 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Searching for MacBook ***
+22:34:38.792 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Clicking thumbnail images ***
+22:34:38.822 [main] INFO  testCases.TC_RF_004_SearchProductTest - *** Adding the product to Wish List ***
+22:35:31.113 [main] DEBUG org.testng.TestNG - suiteXmlPath: "/Users/anashuhada/Library/Caches/JetBrains/IdeaIC2024.2/temp-testng-customsuite.xml"
+22:35:31.192 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/anashuhada/Library/Caches/JetBrains/IdeaIC2024.2/temp-testng-customsuite.xml
+
+22:36:15.300 [main] DEBUG org.testng.TestNG - suiteXmlPath: "/Users/anashuhada/Library/Caches/JetBrains/IdeaIC2024.2/temp-testng-customsuite.xml"
+22:36:15.379 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/anashuhada/Library/Caches/JetBrains/IdeaIC2024.2/temp-testng-customsuite.xml
+

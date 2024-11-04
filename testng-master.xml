@@ -3,9 +3,9 @@
 <suite name="All Test Suite">
     <groups>
         <run>
-            <include name="Sanity"/>
+            <!-- <include name="Sanity"/> -->
             <!--<include name="Regression"/> -->
-            <!-- <include name="Master"/> -->
+            <include name="Master"/>
             <!-- <exclude name=""/> -->
         </run>
     </groups>
@@ -16,12 +16,12 @@
 
     <test thread-count="5" name="Test">
         <parameter name="os" value="mac"/>
-        <parameter name="browser" value="edge"/>
+        <parameter name="browser" value="chrome"/>
 
         <classes>
             <!-- <class name="testCases.TC_RF_001_AccountRegistrationTest"/> -->
-            <class name="testCases.TC_RF_004_LoginTest"/>
-            <!-- <class name="testCases.TC_RF_005_LoginDDTTest"/> -->
+            <class name="testCases.TC_RF_002_LoginTest"/>
+            <!-- <class name="testCases.TC_RF_003_LoginDDTTest"/> -->
         </classes>
     </test>
 </suite>

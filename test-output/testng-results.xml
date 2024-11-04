@@ -5,23 +5,23 @@
   <suite started-at="2024-10-28T22:07:16 MYT" name="All Test Suite" finished-at="2024-10-28T22:07:18 MYT" duration-ms="1931">
     <groups>
       <group name="Master">
-        <method signature="TC_RF_004_LoginTest.verifyLogin()[pri:0, instance:testCases.TC_RF_004_LoginTest@26f3d90c]" name="verifyLogin" class="testCases.TC_RF_004_LoginTest"/>
+        <method signature="TC_RF_004_LoginTest.verifyLogin()[pri:0, instance:testCases.TC_RF_002_LoginTest@26f3d90c]" name="verifyLogin" class="testCases.TC_RF_002_LoginTest"/>
       </group> <!-- Master -->
       <group name="Sanity">
-        <method signature="TC_RF_004_LoginTest.verifyLogin()[pri:0, instance:testCases.TC_RF_004_LoginTest@26f3d90c]" name="verifyLogin" class="testCases.TC_RF_004_LoginTest"/>
+        <method signature="TC_RF_004_LoginTest.verifyLogin()[pri:0, instance:testCases.TC_RF_002_LoginTest@26f3d90c]" name="verifyLogin" class="testCases.TC_RF_002_LoginTest"/>
       </group> <!-- Sanity -->
     </groups>
     <test started-at="2024-10-28T22:07:16 MYT" name="Test" finished-at="2024-10-28T22:07:18 MYT" duration-ms="1931">
-      <class name="testCases.TC_RF_004_LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.TC_RF_004_LoginTest@26f3d90c]" started-at="2024-10-28T22:07:17 MYT" name="setup" finished-at="2024-10-28T22:07:18 MYT" duration-ms="988" status="PASS">
+      <class name="testCases.TC_RF_002_LoginTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.TC_RF_002_LoginTest@26f3d90c]" started-at="2024-10-28T22:07:17 MYT" name="setup" finished-at="2024-10-28T22:07:18 MYT" duration-ms="988" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyLogin()[pri:0, instance:testCases.TC_RF_004_LoginTest@26f3d90c]" started-at="2024-10-28T22:07:18 MYT" name="verifyLogin" finished-at="2024-10-28T22:07:18 MYT" duration-ms="837" status="PASS">
+        <test-method signature="verifyLogin()[pri:0, instance:testCases.TC_RF_002_LoginTest@26f3d90c]" started-at="2024-10-28T22:07:18 MYT" name="verifyLogin" finished-at="2024-10-28T22:07:18 MYT" duration-ms="837" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-      </class> <!-- testCases.TC_RF_004_LoginTest -->
+      </class> <!-- testCases.TC_RF_002_LoginTest -->
     </test> <!-- Test -->
   </suite> <!-- All Test Suite -->
 </testng-results>

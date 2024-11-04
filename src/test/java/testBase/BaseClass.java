@@ -10,10 +10,9 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.*;
 
 import java.io.File;
 import java.io.FileReader;
@@ -27,17 +26,16 @@ import java.util.Properties;
 // log4j
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.testng.annotations.Parameters;
 
 public class BaseClass {
 
-    public static WebDriver driver;
+    public WebDriver driver;
     public Logger logger;
     public Properties prop;
 
     @BeforeClass(groups = {"Sanity", "Regression", "Master"})
     @Parameters({"os", "browser"})
-    public void setup(String os, String br) throws IOException {
+    public void setup(@Optional("mac") String os, @Optional("chrome") String br) throws IOException {
 
         // loading config.properties file
         FileReader file = new FileReader("./src/test/resources/config.properties");
@@ -92,22 +90,10 @@ public class BaseClass {
         System.out.println("Web app successfully launched...");
     }
 
-    @AfterMethod
-    public void tearDown(ITestResult result) throws IOException {
-        try {
-            if (!result.isSuccess()) {  // If test fails
-                String testName = result.getName();
-                captureScreen(testName);  // Capture screenshot on failure
-                logger.error("Test " + testName + " failed. Screenshot captured.");
-            }
-        } catch (Exception e) {
-            logger.error("Exception in tearDown: " + e.getMessage());
-        } finally {
-            if (driver != null) {
-                driver.quit();  // Ensure WebDriver closes regardless of test outcome
-                logger.info("*** Web app successfully closed ***");
-            }
-        }
+    @AfterClass
+    public void tearDown() {
+        System.out.println("Web app closed...");
+        //driver.quit();
     }
 
     public String randomString() {
