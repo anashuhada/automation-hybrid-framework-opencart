@@ -145,14 +145,14 @@ public class TC_RF_006_EndToEndTest extends BaseClass {
             sp.clickAddToWishList();
             logger.info("*** Clicking on Add to Wish List button ***");
 
-//            String msgWishList = sp.messageAddToWishList();
-//            System.out.println(msgWishList);
-//            if (msgWishList.contains("wish list")) {
-//                softAssert.assertTrue(true);
-//            } else {
-//                softAssert.assertTrue(false);
-//            }
-//            logger.info("*** Verifying alert message after adding product to Add to Wish List ***");
+            String msgWishList = sp.messageAddToWishList();
+            System.out.println(msgWishList);
+            if (msgWishList.contains("wish list")) {
+                softAssert.assertTrue(true);
+            } else {
+                softAssert.assertTrue(false);
+            }
+            logger.info("*** Verifying alert message after adding product to Add to Wish List ***");
 
             sp.tabs("Test the review section.");
             logger.info("*** Verifying the menu tabs ***");
@@ -175,26 +175,26 @@ public class TC_RF_006_EndToEndTest extends BaseClass {
             sp.clickButtonAddCart();
             logger.info("*** Clicking on the Add to Cart button ***");
 
-//            String msgShoppingCart = sp.messageAddToCart();
-//            System.out.println(msgShoppingCart);
-//            if (msgShoppingCart.contains("shopping cart")) {
-//                softAssert.assertTrue(true);
-//            } else {
-//                softAssert.assertTrue(false);
-//            }
-//            logger.info("*** Verifying alert message after adding product to shopping cart ***");
+            String msgShoppingCart = sp.messageAddToCart();
+            System.out.println(msgShoppingCart);
+            if (msgShoppingCart.contains("shopping cart")) {
+                softAssert.assertTrue(true);
+            } else {
+                softAssert.assertTrue(false);
+            }
+            logger.info("*** Verifying alert message after adding product to shopping cart ***");
 
             sp.clickCompareProduct();
             logger.info("*** Clicking on Compare this Product button ***");
 
-//            String msgProductComparison = sp.messageCompareProduct();
-//            System.out.println(msgProductComparison);
-//            if (msgProductComparison.contains("product comparison")) {
-//                softAssert.assertTrue(true);
-//            } else {
-//                softAssert.assertTrue(false);
-//            }
-//            logger.info("*** Verifying Compare this Product alert message ***");
+            String msgProductComparison = sp.messageCompareProduct();
+            System.out.println(msgProductComparison);
+            if (msgProductComparison.contains("product comparison")) {
+                softAssert.assertTrue(true);
+            } else {
+                softAssert.assertTrue(false);
+            }
+            logger.info("*** Verifying Compare this Product alert message ***");
 
             sp.clickLinkProductComparison();
             logger.info("*** Clicking on product comparison link ***");
@@ -204,14 +204,14 @@ public class TC_RF_006_EndToEndTest extends BaseClass {
             // product comparison
             ProductComparisonPage pc = new ProductComparisonPage(driver);
 
-//            String prodCompare = pc.getTitleProductComparison();
-//            System.out.println(prodCompare);
-//            if(prodCompare.contains("Product Comparison")) {
-//                softAssert.assertTrue(true);
-//            } else {
-//                softAssert.assertTrue(false);
-//            }
-//            logger.info("*** Verifying Product Comparison heading ***");
+            String prodCompare = pc.getTitleProductComparison();
+            System.out.println(prodCompare);
+            if(prodCompare.contains("Product Comparison")) {
+                softAssert.assertTrue(true);
+            } else {
+                softAssert.assertTrue(false);
+            }
+            logger.info("*** Verifying Product Comparison heading ***");
 
             pc.removeiMac();
             logger.info("*** Removing iMac from product comparison page ***");
@@ -231,13 +231,13 @@ public class TC_RF_006_EndToEndTest extends BaseClass {
             sc.updateQuantity("MacBook", "2");
             logger.info("*** Updating the quantity of the product ***");
 
-//            String msgUpdate = sc.successMessage();
-//            if (msgUpdate.contains("Success")) {
-//                softAssert.assertTrue(true);
-//            } else {
-//                softAssert.assertTrue(false);
-//            }
-//            logger.info("*** Verifying alert message after updating the quantity of the product ***");
+            String msgUpdate = sc.successMessage();
+            if (msgUpdate.contains("Success")) {
+                softAssert.assertTrue(true);
+            } else {
+                softAssert.assertTrue(false);
+            }
+            logger.info("*** Verifying alert message after updating the quantity of the product ***");
 
             sc.clickAccordion();
             logger.info("*** Verifying to click accordion ***");
