@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.internal.EclipseInterface;
 
 import java.time.Duration;
 import java.util.List;
@@ -65,6 +64,21 @@ public class SearchProductPage extends BasePage {
     @FindBy(xpath = "//button[@data-original-title='Add to Wish List']")
     WebElement buttonWishList;
 
+    @FindBy(xpath = "//button[@data-original-title='List']")
+    WebElement viewButtonList;
+
+    @FindBy(xpath = "//button[@data-original-title='Compare this Product']")
+    WebElement buttonCompareProduct;
+
+    @FindBy(xpath = "//button[@type='button']//span[contains(text(),'Add to Cart')]")
+    List<WebElement> buttonAddToCartList;
+
+    @FindBy(xpath = "//button[@data-original-title='Compare this Product']")
+    List<WebElement> buttonCompareProductList;
+
+    @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']//a[contains(text(),'product comparison')]")
+    WebElement linkProductComparison;
+
     @FindBy(xpath = "//textarea[@id='input-review']")
     WebElement textReview;
 
@@ -81,19 +95,21 @@ public class SearchProductPage extends BasePage {
     WebElement messageSuccess;
 
     public void setFieldSearch(String search) throws InterruptedException {
+        fieldSearch.clear();
         fieldSearch.sendKeys(search);
         Thread.sleep(2000);
         act.moveToElement(fieldSearch).sendKeys(Keys.ENTER).perform();
     }
 
-    public void getDropDownCategory() {
+    public void getDropDownCategory() throws InterruptedException {
         dropdownCategory.click();
         Select slt = new Select(dropdownCategory);
         List<WebElement> options = slt.getOptions();
         for(WebElement o : options) {
             // System.out.println(o.getText() + " - " + o.getAttribute("value"));
             if(o.getAttribute("value").equals("20")) {
-                o.click();
+                Thread.sleep(2000);
+                wait.until(ExpectedConditions.elementToBeClickable(o)).click();
                 break;
             }
         }
@@ -110,12 +126,66 @@ public class SearchProductPage extends BasePage {
             for(WebElement caption : listProductCaption) {
                 // System.out.println(caption.getText());
                 if(caption.getText().equals("MacBook")) {
-                    caption.click();
+                    wait.until(ExpectedConditions.visibilityOf(caption)).click();
                     break;
                 }
             }
         }
         else {
+            System.out.println("There's no product displayed.");
+        }
+    }
+
+    public void clickViewOption() {
+        viewButtonList.click();
+    }
+
+    public void getiMac() throws InterruptedException {
+        int countProductThumb = listProductCaption.size();
+        if (countProductThumb > 0) {
+            for (int i = 0; i < listProductCaption.size(); i++) {
+                WebElement caption = listProductCaption.get(i);
+                // System.out.println(caption.getText());
+                if (caption.getText().equals("iMac")) {
+                    js.executeScript("arguments[0].scrollIntoView()", caption);
+
+                    WebElement addToCartButton = buttonAddToCartList.get(i);
+                    WebElement compareProductButton = buttonCompareProductList.get(i);
+
+                    wait.until(ExpectedConditions.visibilityOf(addToCartButton)).click();
+                    System.out.println("Add to Cart - iMac");
+                    Thread.sleep(3000);
+                    wait.until(ExpectedConditions.visibilityOf(compareProductButton)).click();
+                    System.out.println("Compare this Product - iMac");
+                    break;
+                }
+            }
+        } else {
+            System.out.println("There's no product displayed.");
+        }
+    }
+
+    public void getMacBookPro() throws InterruptedException {
+        int countProductThumb = listProductCaption.size();
+        if (countProductThumb > 0) {
+            for (int i = 0; i < listProductCaption.size(); i++) {
+                WebElement caption = listProductCaption.get(i);
+                // System.out.println(caption.getText());
+                if (caption.getText().equals("MacBook Pro")) {
+                    js.executeScript("arguments[0].scrollIntoView()", caption);
+
+                    WebElement addToCartButton = buttonAddToCartList.get(i);
+                    WebElement compareProductButton = buttonCompareProductList.get(i);
+
+                    wait.until(ExpectedConditions.visibilityOf(addToCartButton)).click();
+                    System.out.println("Add to Cart - MacBook Pro");
+                    Thread.sleep(3000);
+                    wait.until(ExpectedConditions.visibilityOf(compareProductButton)).click();
+                    System.out.println("Compare this Product - MacBook Pro");
+                    break;
+                }
+            }
+        } else {
             System.out.println("There's no product displayed.");
         }
     }
@@ -128,8 +198,9 @@ public class SearchProductPage extends BasePage {
             Thread.sleep(2000);
 
             for (int i = 0; i < countThumbnail - 1; i++) {
+                wait.until(ExpectedConditions.visibilityOf(thumbnail));
                 nextArrow.click();
-                Thread.sleep(2000);
+                Thread.sleep(1000);
             }
             closeButton.click();
             return;
@@ -145,12 +216,14 @@ public class SearchProductPage extends BasePage {
 
         Thread.sleep(2000);
 
+        js.executeScript("arguments[0].scrollIntoView(true)", tabSpecification);
         act.moveToElement(tabSpecification)
                 .click()
                 .perform();
 
         Thread.sleep(2000);
 
+        js.executeScript("arguments[0].scrollIntoView(true)", tabReviews);
         act.moveToElement(tabReviews)
                 .click()
                 .perform();
@@ -175,10 +248,28 @@ public class SearchProductPage extends BasePage {
 
     public String messageAddToWishList() {
         try {
+            wait.until(ExpectedConditions.visibilityOf(messageSuccess));
             return messageSuccess.getText();
         } catch(Exception e) {
             return e.getMessage();
         }
+    }
+
+    public void clickCompareProduct() {
+        wait.until(ExpectedConditions.elementToBeClickable(buttonCompareProduct)).click();
+    }
+
+    public String messageCompareProduct() {
+        try {
+            wait.until(ExpectedConditions.visibilityOf(messageSuccess));
+            return messageSuccess.getText();
+        } catch(Exception e) {
+            return e.getMessage();
+        }
+    }
+
+    public void clickLinkProductComparison() {
+        wait.until(ExpectedConditions.visibilityOf(linkProductComparison)).click();
     }
 
     public String getTitle() {
@@ -206,7 +297,7 @@ public class SearchProductPage extends BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(buttonAddCart)).click();
     }
 
-    public String getMessageSuccess() {
+    public String messageAddToCart() {
         try {
             wait.until(ExpectedConditions.visibilityOf(messageSuccess));
             return messageSuccess.getText();
@@ -214,4 +305,7 @@ public class SearchProductPage extends BasePage {
             return e.getMessage();
         }
     }
+
+
+
 }

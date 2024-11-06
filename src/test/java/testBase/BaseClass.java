@@ -33,7 +33,7 @@ public class BaseClass {
     public Logger logger;
     public Properties prop;
 
-    @BeforeClass(groups = {"Sanity", "Regression", "Master"})
+    @BeforeClass(groups = {"Sanity", "Regression", "Master", "EndToEnd"})
     @Parameters({"os", "browser"})
     public void setup(@Optional("mac") String os, @Optional("chrome") String br) throws IOException {
 

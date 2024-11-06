@@ -75,7 +75,7 @@ public class TC_RF_004_SearchProductTest extends BaseClass {
             sp.clickButtonAddCart();
             logger.info("*** Clicking the Add to Cart button ***");
 
-            String success = sp.getMessageSuccess();
+            String success = sp.messageAddToCart();
             if (success.contains("Success: You have added MacBook to your shopping cart!")) {
                 Assert.assertTrue(true);
             } else {

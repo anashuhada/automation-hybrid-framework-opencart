@@ -1,6 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,6 +27,9 @@ public class ShoppingCartPage extends BasePage {
     @FindBy(xpath = "//div[@class='table-responsive']//tr")
     List<WebElement> totalRow;
 
+    @FindBy(xpath = "//span[@class='input-group-btn']//button[@data-original-title='Remove']")
+    List<WebElement> buttonRemoveList;
+
     @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
     WebElement successUpdateMsg;
 
@@ -39,7 +43,7 @@ public class ShoppingCartPage extends BasePage {
     List<WebElement> listAccordion;
 
     public void clickShoppingCart() {
-        linkShoppingCart.click();
+        wait.until(ExpectedConditions.elementToBeClickable(linkShoppingCart)).click();
     }
 
     public void clickLinkImage() throws InterruptedException {
@@ -54,26 +58,25 @@ public class ShoppingCartPage extends BasePage {
         driver.navigate().back();
     }
 
-    public void updateQuantity(String searchProduct, String qty) {
+    public void updateQuantity(String searchProduct, String qty) throws InterruptedException {
         for (int i = 0; i < totalRow.size(); i++) {
             WebElement row = totalRow.get(i);
             if (row.getText().contains(searchProduct)) {
                 System.out.println("Found product: " + searchProduct);
 
                 // find the quantity input field within the specific row
-                WebElement quantityField = row.findElement(By.xpath("//div[@class='input-group btn-block']//input[@type='text']"));
+                WebElement quantityField = row.findElement(By.xpath(".//div[@class='input-group btn-block']//input[@type='text']"));
                 wait.until(ExpectedConditions.visibilityOf(quantityField));
                 quantityField.clear();
+                Thread.sleep(2000);
                 quantityField.sendKeys(qty);
 
                 // find the update button within the specific row
-                WebElement updateButton = row.findElement(By.xpath("//button[@data-original-title='Update']"));
-                wait.until(ExpectedConditions.visibilityOf(updateButton));
-                updateButton.click();
+                WebElement updateButton = row.findElement(By.xpath(".//button[@data-original-title='Update']"));
+                wait.until(ExpectedConditions.visibilityOf(updateButton)).click();
                 break;
             }
         }
-
     }
 
     public String successMessage() {
@@ -88,7 +91,7 @@ public class ShoppingCartPage extends BasePage {
     public void clickAccordion() throws InterruptedException {
         for(WebElement a : listAccordion) {
             wait.until(ExpectedConditions.elementToBeClickable(a));
-            js.executeScript("arguments[0].scrollIntoView(true);", a);
+            js.executeScript("arguments[0].scrollIntoView(true)", a);
             a.click();
             System.out.println(a.getText());
             Thread.sleep(2000);
@@ -96,14 +99,14 @@ public class ShoppingCartPage extends BasePage {
     }
 
     public void removeProduct(String searchProduct) {
-        for (int i = 0; i < totalRow.size(); i++) {
-            WebElement row = totalRow.get(i);
+        for (WebElement row : totalRow) {
             if (row.getText().contains(searchProduct)) {
-                System.out.println("Remove product: " + searchProduct);
+                System.out.println("Removing product: " + searchProduct);
 
-                WebElement removeButton = row.findElement(By.xpath("//button[@data-original-title='Remove']"));
-                wait.until(ExpectedConditions.visibilityOf(removeButton));
-                removeButton.click();
+                // single specific element within a broader element or container
+                WebElement removeButton = row.findElement(By.xpath(".//span[@class='input-group-btn']//button[@data-original-title='Remove']"));
+
+                wait.until(ExpectedConditions.visibilityOf(removeButton)).click();
                 break;
             }
         }
@@ -114,10 +117,10 @@ public class ShoppingCartPage extends BasePage {
             WebElement row = totalRow.get(i);
             if (row.getText().contains(searchProduct)) {
                 if (row.getText().contains(textDangerSymbol)) {
-                    System.out.println("Product is out of stock - cannot proceed to checkout");
-                    buttonContinueShopping.click();
+                    System.out.println("Product is out of stock - cannot proceed to checkout. Continue Shopping.");
+                    wait.until(ExpectedConditions.elementToBeClickable(buttonContinueShopping)).click();
                 } else {
-                    buttonCheckout.click();
+                    wait.until(ExpectedConditions.elementToBeClickable(buttonCheckout)).click();
                 }
             }
         }
