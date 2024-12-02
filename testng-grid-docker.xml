@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" thread-count="5">
+    <groups>
+        <run>
+             <include name="Sanity"/>
+            <!-- <include name="Regression"/> -->
+            <!-- <include name="Master"/> -->
+            <!-- <exclude name=""/> -->
+        </run>
+    </groups>
+
+    <listeners>
+        <listener class-name="utilities.ExtentReportManager"/>
+    </listeners>
+
+    <test name="Linux-Chrome">
+        <parameter name="os" value="Linux"/>
+        <parameter name="browser" value="chrome"/>
+
+        <classes>
+            <!-- <class name="testCases.TC_RF_001_AccountRegistrationTest"/> -->
+            <class name="testCases.TC_RF_002_LoginTest"/>
+            <!-- <class name="testCases.TC_RF_003_LoginDDTTest"/> -->
+        </classes>
+    </test>
+
+    <test name="Linux-Firefox">
+        <parameter name="os" value="Linux"/>
+        <parameter name="browser" value="firefox"/>
+
+        <classes>
+            <!-- <class name="testCases.TC_RF_001_AccountRegistrationTest"/> -->
+            <class name="testCases.TC_RF_002_LoginTest"/>
+            <!-- <class name="testCases.TC_RF_003_LoginDDTTest"/> -->
+        </classes>
+    </test>
+
+</suite>
